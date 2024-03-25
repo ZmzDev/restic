@@ -93,8 +93,8 @@ func (b *TextProgress) CompleteItem(messageType, item string, s archiver.ItemSta
 		b.VV("new       %v, saved in %.3fs (%v added, %v stored, %v metadata)",
 			item, d.Seconds(), ui.FormatBytes(s.DataSize),
 			ui.FormatBytes(s.DataSizeInRepo), ui.FormatBytes(s.TreeSizeInRepo))
-	case "dir unchanged":
-		b.VV("unchanged %v", item)
+	// case "dir unchanged":
+	// 	b.VV("unchanged %v", item)
 	case "dir modified":
 		b.VV("modified  %v, saved in %.3fs (%v added, %v stored, %v metadata)",
 			item, d.Seconds(), ui.FormatBytes(s.DataSize),
@@ -102,8 +102,8 @@ func (b *TextProgress) CompleteItem(messageType, item string, s archiver.ItemSta
 	case "file new":
 		b.VV("new       %v, saved in %.3fs (%v added)", item,
 			d.Seconds(), ui.FormatBytes(s.DataSize))
-	case "file unchanged":
-		b.VV("unchanged %v", item)
+	// case "file unchanged":
+	// 	b.VV("unchanged %v", item)
 	case "file modified":
 		b.VV("modified  %v, saved in %.3fs (%v added, %v stored)", item,
 			d.Seconds(), ui.FormatBytes(s.DataSize), ui.FormatBytes(s.DataSizeInRepo))
